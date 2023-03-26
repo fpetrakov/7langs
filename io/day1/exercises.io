@@ -1,9 +1,11 @@
 #
 Person := Object clone
 Person numOfLegs := 2
+Person name := "Noone"
 
 fedya := Person clone
 fedya numOfLegs := 10
+fedya name := "Fedya"
 
 writeln(fedya ?numOfLegs)
 writeln(fedya slotNames)
@@ -19,3 +21,7 @@ writeln(dima)
 # updates slot
 andrey = Person clone
 writeln(andrey)
+
+Person hello := method("#{name}" interpolate println)
+
+fedya hello
